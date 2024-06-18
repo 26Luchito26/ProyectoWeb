@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Registrarse{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/registro.css' %}">
+
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <div class="logo-empresa">
+    <img src="{% static 'ProyectoWebApp/img/logo.png' %}" alt="Logo de la empresa" width="200px" height="180px">
+  </div>
+
+  <div class="contenedor_principal">
+    <div class="contenido_principal">
+      {% if not user.is_authenticated %}
+        <div class="message">
+          <h1>Debes registrarte e iniciar sesión para realizar y exportar solicitudes.</h1>
+        </div>
+      {% endif %}
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+ 
+  <div class="capa"></div>
+  
+  <div class="contenedor-footer">
+    <footer>
+      <div class="informacion-contacto">
+          <p>Coca Cola Andina Planta Punta Arenas</p>
+          <p>Teléfono: (61) 220 4107</p>
+          <p>Dirección: José Ignacio Zenteno 730, 6200000, Punta Arenas, Magallanes y la Antártica Chilena</p>
+          <p>© Todos los derechos reservados a Ignacio Ulloa, Monserratt Vargas y Luis Huanel - INACAP 2024</p>
+      </div>
+    </footer>
+  </div>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

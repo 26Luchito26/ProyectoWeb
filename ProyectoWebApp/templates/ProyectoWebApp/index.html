@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coca Cola Andina</title>
+  <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/inicio.css' %}">
+  <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/whatsapp.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+</head>
+<body>
+  
+  <div class="background-image"></div>
+
+  <section>
+    <img src="{% static 'ProyectoWebApp/img/sec_1.jpg' %}">
+    <img src="{% static 'ProyectoWebApp/img/sec_2.jpg' %}">
+    <img src="{% static 'ProyectoWebApp/img/sec_3.jpg' %}">
+    <img src="{% static 'ProyectoWebApp/img/sec_4.jpg' %}">
+  </section>
+
+  <div class="logo-empresa">
+    <img src="{% static 'ProyectoWebApp/img/logo.png' %}" alt="Logo de la empresa" width="200px" height="180px">
+  </div>
+
+  <!-- ENLACE DE WHATSAPP -->
+  <div class="whatsapp-container">
+    <a href="https://wa.me/56945345773?text=Hola,%20estoy%20tratando%20de%20contactarte.%20¿Podemos%20hablar%3F" target="_blank" class="whatsapp">
+      <img src="{% static 'ProyectoWebApp/img/whatsapp.png' %}" alt="whatsapp" width="130px"/>
+    </a>
+    <span class="whatsapp-text">¡Contáctanos por WhatsApp!</span>
+  </div>
+
+  <div class="barra-lateral">
+    <div class="usuario_registro">
+      {% if user.is_authenticated %}
+        Hola {{ user.username }} &nbsp; &nbsp;<a href="{% url 'cerrar_sesion' %}" style="color: white;">Cerrar sesión</a>
+      {% else %}
+        <a href="{% url 'logear' %}" style="color: white;">Login</a> &nbsp; &nbsp; <a href="{% url 'Autenticacion' %}" style="color: white;">Regístrate</a>
+      {% endif %}
+    </div>
+
+    <ul>
+      <li class="grupo2"><a href="{% url 'Index' %}">INICIO</a></li>
+      <li class="grupo2"><a href="{% url 'Solicitudes_Retiro' %}">SOLICITUD DE RETIRO</a></li>
+      <li class="grupo2"><a href="{% url 'Solicitudes_Material' %}">SOLICITUD DE MATERIAL</a></li>
+      <li class="grupo2"><a href="{% url 'Solicitudes_Epps' %}">SOLICITUD DE EPPS</a></li>
+      <li class="grupo2"><a href="{% url 'exportar_solicitudes_excel' %}">EXPORTAR SOLICITUDES</a></li>
+      <li class="grupo2"><a href="{% url 'Contacto' %}">CONTACTO</a></li>
+      <li class="grupo2"><a href="{% url 'capsulas' %}">CÁPSULAS DE VIDEO DE CAPACITACIÓN</a></li>
+    </ul>
+  </div>
+
+  <div class="capa"></div>
+
+  <div class="contenedor-footer">
+    <footer>
+      <div class="informacion-contacto">
+        <p>Coca Cola Andina Planta Punta Arenas</p>
+        <p>Teléfono: (61) 220 4107</p>
+        <p>Dirección: José Ignacio Zenteno 730, 6200000, Punta Arenas, Magallanes y la Antártica Chilena</p>
+        <p>© Todos los derechos reservados a Ignacio Ulloa, Monserratt Vargas y Luis Huanel - INACAP 2024</p>
+      </div>
+    </footer>
+  </div>
+  
+</body>
+</html>

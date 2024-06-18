@@ -1,0 +1,14 @@
+{% extends 'ProyectoWebApp/base_registrarse_login.html' %}
+
+{% load static %}
+
+{% block content %}
+<form method="post" class="container">
+
+    {% csrf_token %}
+
+    {{ form }}
+
+    <button type="submit" class="btn btn-success">Regístrate</button>
+</form>
+{% endblock %}

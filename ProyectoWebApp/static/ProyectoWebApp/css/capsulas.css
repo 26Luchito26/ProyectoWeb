@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/ProyectoWebApp/img/coca.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -4;
+}
+
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(130deg, #df2b34, #fb4c4c);
+    opacity: 0.3;
+    z-index: -3;
+}
+
+.barra-lateral ul {
+    padding: 0;
+    margin: 0;
+}
+
+.grupo2 {
+    order: 1;
+    margin-top: 30px;
+}
+
+.barra-lateral {
+    width: 250px;
+    height: 100%;
+    background: rgb(215, 10, 10);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    z-index: 0;
+    opacity: 0.9;
+    border-radius: 0px 80px 0px 0px;
+    border-right: 10px solid rgba(255, 255, 255, 0.7);
+}
+
+.barra-lateral ul li {
+    list-style: none;
+    padding: 10px;
+    background-color: #b40012;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.barra-lateral ul li:hover {
+    background: #700606;
+    cursor: pointer;
+}
+
+.barra-lateral ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.barra-lateral ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    transition: height 0.3s;
+}
+
+.barra-lateral ul li a:hover::after {
+    height: 4px;
+}
+
+.logo-empresa {
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    width: 10%;
+    height: auto;
+    z-index: 2; /* Aumentado para estar por delante del contenido principal */
+}
+
+.contenedor-footer {
+    width: 100%;
+    height: auto; /* Ajusta la altura según el contenido */
+    background-color: #b60505;
+    color: white;
+    position: relative;
+    z-index: 0; /* Asegura que el footer esté detrás del logo */
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+.informacion-contacto {
+    width: 100%;
+    background-color: #b60505;
+    color: white;
+    position: relative;
+    z-index: 2; /* Asegura que cubra el footer completamente */
+    padding: 10px; /* Añadido para dar espacio al contenido */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del contenedor */
+}
+
+.informacion-contacto p {
+    margin: 5px 0;
+    
+}
+
+
+
+

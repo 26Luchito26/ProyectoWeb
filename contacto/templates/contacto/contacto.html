@@ -1,0 +1,30 @@
+{% extends 'ProyectoWebApp/base_contacto.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<h1>Contacto</h1>
+
+<div class="contenedorFormulario">
+
+    {% if "valido" in request.GET %}
+        <p>Información enviada correctamente.</p>
+    {% endif %}
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <table>{{ miFormulario.as_table }}</table>
+        <input type="submit" value="Enviar">
+    </form>
+
+</div>
+{% endblock %}
+
+{% block barra_lateral %}
+    <div class="barra-lateral">
+        <ul>
+            <li class="grupo2"><a href="{% url 'Index' %}">VOLVER AL INICIO</a></li>
+        </ul>
+    </div>
+{% endblock %}

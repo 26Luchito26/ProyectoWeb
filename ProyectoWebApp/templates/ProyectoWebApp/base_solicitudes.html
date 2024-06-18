@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Solicitud Epps{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'ProyectoWebApp/css/solicitudes.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+  <div class="background-image"></div>
+
+  <div class="barra-lateral">
+    <ul>
+      <li class="grupo2"><a href="{% url 'Index' %}">VOLVER AL INICIO</a></li>
+    </ul>
+  </div>
+
+  <div class="logo-empresa">
+    <img src="{% static 'ProyectoWebApp/img/logo.png' %}" alt="Logo de la empresa" width="200px" height="180px">
+  </div>
+
+  <div class="contenedor_principal">
+    <h1>{% block page_title %}Elementos Epps Disponibles:{% endblock %}</h1>
+    <div class="contenido_principal">
+      {% block content %}
+      {% endblock %}
+    </div>
+  </div>
+
+  <div class="capa"></div>
+  
+  <div class="contenedor-footer">
+    <footer>
+      <div class="informacion-contacto">
+          <p>Coca Cola Andina Planta Punta Arenas</p>
+          <p>Teléfono: (61) 220 4107</p>
+          <p>Dirección: José Ignacio Zenteno 730, 6200000, Punta Arenas, Magallanes y la Antártica Chilena</p>
+          <p>© Todos los derechos reservados a Ignacio Ulloa, Monserratt Vargas y Luis Huanel - INACAP 2024</p>
+      </div>
+    </footer>
+  </div>
+
+  {% block extra_scripts %}{% endblock %}
+</body>
+</html>

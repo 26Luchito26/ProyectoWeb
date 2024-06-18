@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/ProyectoWebApp/img/coca.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -4;
+}
+
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(130deg, #df2b34, #fb4c4c);
+    opacity: 0.3;
+    z-index: -3;
+}
+
+.barra-lateral ul {
+    padding: 0;
+    margin: 0;
+}
+
+.barra-lateral {
+    width: 250px;
+    height: 100%;
+    background: rgb(215, 10, 10);
+    overflow: auto;
+    position: fixed;
+    left: 0;
+    z-index: 0;
+    opacity: 0.9;
+    border-radius: 0px 80px 0px 0px;
+    border-right: 10px solid rgba(255, 255, 255, 0.7);
+}
+
+.barra-lateral ul li {
+    list-style: none;
+    padding: 10px;
+    background-color: #b40012;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.barra-lateral ul li:hover {
+    background: #700606;
+    cursor: pointer;
+}
+
+.barra-lateral ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+.barra-lateral ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+    transition: height 0.3s;
+}
+
+.barra-lateral ul li a:hover::after {
+    height: 4px;
+}
+
+.contenedor_principal {
+    margin-left: 250px; /* Ajusta para que la barra lateral no se superponga */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Asegura que el contenido principal esté sobre la barra lateral */
+    overflow-y: auto;
+}
+
+.contenido_principal {
+    margin-bottom: 20px;
+}
+
+.logo-empresa {
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    width: 10%;
+    height: auto;
+    z-index: 2; /* Aumentado para estar por delante del contenido principal */
+}
+
+.contenedor-footer {
+    width: 100%;
+    height: auto;
+    background-color: #b60505;
+    color: white;
+    position: absolute;
+    z-index: 0; /* Asegura que el footer esté detrás del contenido */
+   
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.informacion-contacto {
+    width: 100%;
+    background-color: #b60505;
+    color: white;
+    position: relative;
+    z-index: 2; /* Asegura que cubra el footer completamente */
+    padding: 10px; /* Añadido para dar espacio al contenido */
+    box-sizing: border-box; /* Asegura que el padding no aumente el tamaño del contenedor */
+}
+
+.informacion-contacto p {
+    margin: 5px 0;
+}
+
+.formulario-solicitud {
+    position: relative; /* Asegura que el contenedor tenga posición relativa */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para mayor claridad visual */
+    padding: 20px; /* Espacio interno para separar el contenido */
+    margin-bottom: 20px; /* Margen inferior para separar el formulario de otros elementos */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra ligera */
+}
+
+.formulario-solicitud h2 {
+    font-size: 24px; /* Tamaño de fuente para los títulos */
+    margin-bottom: 10px; /* Espacio inferior */
+    color: white; /* Color de texto */
+}
+
+.formulario-solicitud form {
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+.formulario-solicitud form label {
+    display: block; /* Hace que las etiquetas ocupen una línea completa */
+    margin-bottom: 8px; /* Espacio inferior entre etiquetas */
+    color: white; /* Color de texto */
+    font-weight: bold; /* Texto en negrita para etiquetas */
+}
+
+.formulario-solicitud form input[type="text"],
+.formulario-solicitud form input[type="datetime-local"],
+.formulario-solicitud form textarea {
+    width: 100%; /* Ancho completo para campos de entrada */
+    padding: 8px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio inferior entre campos */
+    border: 1px solid #ccc; /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    box-sizing: border-box; /* Asegura que el tamaño total sea respetado */
+}
+
+.formulario-solicitud form button {
+    background-color: #b40012; /* Color de fondo del botón */
+    color: white; /* Color de texto del botón */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente */
+}
+
+.formulario-solicitud form button:hover {
+    background-color: #700606; /* Color de fondo del botón al pasar el ratón */
+}
+
+.imagenes_solicitudes {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra las imágenes horizontalmente */
+    overflow-x: auto; /* Permite desplazamiento horizontal si las imágenes exceden el ancho */
+    white-space: nowrap; /* Evita el salto de línea entre las imágenes */
+}
+
+.imagenes_solicitudes h2 {
+    font-size: 24px;
+    margin-bottom: 15px; /* Aumentado el margen inferior para separar más el título */
+}
+
+.imagenes_solicitudes h3 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 10px; /* Añadido margen inferior para separar de las imágenes */
+}
+
+.imagenes_solicitudes img {
+    width: 300px; /* Establece un ancho fijo para todas las imágenes */
+    height: auto;
+    display: inline-block; /* Alinea las imágenes en línea */
+    margin: 0 10px; /* Espacio horizontal entre las imágenes */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}

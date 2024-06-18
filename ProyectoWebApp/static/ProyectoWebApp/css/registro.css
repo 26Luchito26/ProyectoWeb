@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/static/ProyectoWebApp/img/coca.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -4;
+}
+
+.capa {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(130deg, #df2b34, #fb4c4c);
+    opacity: 0.3;
+    z-index: -3;
+}
+
+.logo-empresa {
+    position: fixed;
+    top: 10px;
+    right: 50px;
+    width: 10%;
+    height: auto;
+    z-index: 2;
+}
+
+.contenedor-footer {
+    width: 100%;
+    height: auto;
+    color: white;
+    position: relative;
+    z-index: 0;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.informacion-contacto {
+    width: 100%;
+    background-color: #b60505;
+    color: white;
+    position: fixed;
+    z-index: 2;
+    padding: 10px;
+    box-sizing: border-box;
+    bottom: 0;
+}
+
+.informacion-contacto p {
+    margin: 5px 0;
+}
+
+/* CSS para dar formato al formulario de registro */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Hacer el fondo un poco más oscuro para resaltar el formulario */
+    padding: 20px;
+    border-radius: 10px; /* Aumentar el radio de borde para dar un aspecto más suave */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1); /* Agregar sombra alrededor del formulario */
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    color: white; /* Hacer que el texto de la etiqueta sea blanco */
+    margin-bottom: 5px; /* Agregar un pequeño espacio entre las etiquetas y los campos de entrada */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: none; /* Quitar el borde para que los campos de entrada se vean más limpios */
+    border-bottom: 2px solid #fff; /* Agregar un borde inferior blanco */
+    background-color: transparent; /* Hacer el fondo transparente para mostrar el fondo del contenedor */
+    color: white; /* Hacer que el texto dentro de los campos de entrada sea blanco */
+    margin-bottom: 20px; /* Agregar espacio entre los campos de entrada */
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-success {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #a40404;
+}
